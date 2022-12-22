@@ -1,4 +1,4 @@
-## Test Exporter for Prometheus
+## Writing your exporter for Prometheus
 
 So let's assume we have a registration/authentication application. And we are system administrators who need to track 
 how many successful authentication or registration requests are received and how many 
@@ -24,6 +24,7 @@ Run prometheus with the config and looking at result.
 
 QUICK START with DOCKER 
 
+Build DOCKER IMAGE or use prom/prometheus
 ```
 $ docker run --name prometheus -d --network="host" prom/prometheus
 $ docker cp config/prometheus.yml prometheus:/etc/prometheus
@@ -44,6 +45,7 @@ login:password for grafana(port 3000):
 ```
 admin:admin
 ```
+In grafana you need to configure the data source.
 Config for grafana dashboard:
 ```
 config/node-exporter.json

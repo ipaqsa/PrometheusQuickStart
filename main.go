@@ -44,15 +44,12 @@ func getRandom(values []string, probs []float64) string {
 	}
 	return values[len(values)-1]
 }
-
 func getType() string {
 	return getRandom(requestTypes, typesProbs)
 }
-
 func getResponse() string {
 	return getRandom(requestResponses, responseProbs)
 }
-
 func performRequest() {
 	type_ := getType()
 	response_ := getResponse()
